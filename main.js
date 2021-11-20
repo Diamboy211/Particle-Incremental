@@ -28,7 +28,7 @@ function loop() {
     
     if (game_data.running) {
         game_data.time_until_increment -= dt;
-        let tick_rate = Math.max(1, Math.min(game_data.y, 30));
+        let tick_rate = Math.max(1, Math.min(game_data.y, 20));
         if (game_data.time_until_increment <= 0) {
             game_data.time_until_increment += 1 / tick_rate;
             game_data.x += game_data.y / tick_rate;
