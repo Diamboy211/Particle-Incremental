@@ -25,7 +25,7 @@ function loop() {
     const dt = (_dn - game_data.last_tick) * 0.001;
     game_data.last_tick = _dn;
     game_data.x += game_data.y * dt;
-    document.getElementById("counter") = Math.floor(game_data.x);
+    document.getElementById("counter").textContent = Math.floor(game_data.x);
 }
 
 main();
