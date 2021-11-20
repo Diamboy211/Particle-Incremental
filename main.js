@@ -27,7 +27,7 @@ function loop() {
     
     if (game_data.running) {
         game_data.time_until_increment -= dt;
-        if (game_data.time_until_increment <= 0) {
+        if (game_data.time_until_increment++ <= 0) {
             game_data.x += game_data.y;
             document.getElementById("counter").textContent = game_data.x;
         }
