@@ -8,6 +8,7 @@ let game_data = {
 
 function callup() {
     game_data.running = !game_data.running;
+    document.getElementById("generator").textContent = `generator ${game_data.running ? "on" : "off"}`;
 }
 
 function incy() {
