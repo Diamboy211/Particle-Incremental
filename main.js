@@ -3,7 +3,7 @@ let game_data = {
     y: 0,
     running: false,
     last_tick: null,
-    time_until_increment: 0.001;
+    time_until_increment: 0.001,
 };
 
 function callup() {
