@@ -25,7 +25,7 @@ function loop() {
     const dt = (_dn - game_data.last_tick) * 0.001;
     game_data.last_tick = _dn;
     
-    if (game_data.is_running) {
+    if (game_data.running) {
         game_data.time_until_increment -= dt;
         if (game_data.time_until_increment <= 0) {
             game_data.x += game_data.y;
