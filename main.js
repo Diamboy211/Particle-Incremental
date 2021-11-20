@@ -29,7 +29,7 @@ function loop() {
     if (game_data.running) {
         game_data.time_until_increment -= dt;
         if (game_data.time_until_increment <= 0) {
-            let tick_rate = Math.max(1, Math.min(game_data.y, 10));
+            let tick_rate = Math.max(1, Math.min(game_data.y, 30));
             game_data.time_until_increment += 1 / tick_rate;
             game_data.x += game_data.y / tick_rate;
             document.getElementById("counter").textContent = Math.floor(game_data.x);
