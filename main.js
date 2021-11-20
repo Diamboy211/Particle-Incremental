@@ -32,7 +32,7 @@ function loop() {
             let tick_rate = Math.min(y, 10);
             game_data.time_until_increment += 1 / tick_rate;
             game_data.x += game_data.y / tick_rate;
-            document.getElementById("counter").textContent = game_data.x / tick_rate;
+            document.getElementById("counter").textContent = Math.floor(game_data.x);
         }
     }
 }
