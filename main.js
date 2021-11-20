@@ -35,7 +35,7 @@ function loop() {
             document.getElementById("counter").textContent = Math.floor(game_data.x);
         }
         if (game_data.time_until_increment < 0)
-            document.getElementById("lag").textContent = `${Math.floor(game_data.time_until_increment)} frames behind`;
+            document.getElementById("lag").textContent = `${-Math.floor(game_data.time_until_increment)} frames behind`;
         else document.getElementById("lag").textContent = "";
     }
 }
