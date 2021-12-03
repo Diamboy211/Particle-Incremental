@@ -26,7 +26,7 @@ function loop() {
 	game_data.last_tick = _dn;
 	game_data.particles += game_data.increment * dt;
 	const disp_particles = Math.floor(game_data.particles);
-	document.getElementById("counter").textContent = `${disp_particles} particle${disp_particles == 1 ? 's' : ''}`;
+	document.getElementById("counter").textContent = `${disp_particles} particle${disp_particles == 1 ? '' : 's'}`;
 }
 
 main();
