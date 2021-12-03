@@ -1,6 +1,6 @@
 let game_data = {
-	x: 0,
-	y: 0,
+	particles: 0,
+	increment: 0,
 	running: false,
 	last_tick: null,
 };
@@ -11,12 +11,12 @@ function callup() {
 }
 
 function incy() {
-	game_data.y++;
+	game_data.increment++;
 }
 
 function main() {
 	game_data.last_tick = Date.now();
-	loop();    
+	loop();
 }
 
 function loop() {
@@ -24,8 +24,9 @@ function loop() {
 	const _dn = Date.now();
 	const dt = (_dn - game_data.last_tick) * 0.001;
 	game_data.last_tick = _dn;
-	game_data.x += game_data.y * dt;
-	document.getElementById("counter").textContent = Math.floor(game_data.x);
+	game_data.particles += game_data.increment * dt;
+	const disp_particles = Math.floor(game_data.particles);
+	document.getElementById("counter").textContent = `${disp_particles} particle${disp_particles == 1 ? 's' : ''}`;
 }
 
 main();
